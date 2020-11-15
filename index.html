@@ -54,6 +54,20 @@
         }
     </style>
 
+        <style>
+        .part.imageaudio {position:relative;}
+.part.imageaudio.active.heard + .part.imageaudio::after {
+ background: gold;
+ content: '';
+ display: block;
+ height: 0.5rem;
+ position: absolute;
+ top: 0;
+ width: 100vw;
+}
+#story0-27 .text {margin:0;}
+        </style>
+
     <script type="text/javascript">
       (function () {var f={};var g=/iPhone/i,i=/iPod/i,j=/iPad/i,k=/\biOS-universal(?:.+)Mac\b/i,h=/\bAndroid(?:.+)Mobile\b/i,m=/Android/i,c=/(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,d=/Silk/i,b=/Windows Phone/i,n=/\bWindows(?:.+)ARM\b/i,p=/BlackBerry/i,q=/BB10/i,s=/Opera Mini/i,t=/\b(CriOS|Chrome)(?:.+)Mobile/i,u=/Mobile(?:.+)Firefox\b/i,v=function(l){return void 0!==l&&"MacIntel"===l.platform&&"number"==typeof l.maxTouchPoints&&l.maxTouchPoints>1&&"undefined"==typeof MSStream};function w(l){return function($){return $.test(l)}}function x(l){var $={userAgent:"",platform:"",maxTouchPoints:0};l||"undefined"==typeof navigator?"string"==typeof l?$.userAgent=l:l&&l.userAgent&&($={userAgent:l.userAgent,platform:l.platform,maxTouchPoints:l.maxTouchPoints||0}):$={userAgent:navigator.userAgent,platform:navigator.platform,maxTouchPoints:navigator.maxTouchPoints||0};var a=$.userAgent,e=a.split("[FBAN");void 0!==e[1]&&(a=e[0]),void 0!==(e=a.split("Twitter"))[1]&&(a=e[0]);var r=w(a),o={apple:{phone:r(g)&&!r(b),ipod:r(i),tablet:!r(g)&&(r(j)||v($))&&!r(b),universal:r(k),device:(r(g)||r(i)||r(j)||r(k)||v($))&&!r(b)},amazon:{phone:r(c),tablet:!r(c)&&r(d),device:r(c)||r(d)},android:{phone:!r(b)&&r(c)||!r(b)&&r(h),tablet:!r(b)&&!r(c)&&!r(h)&&(r(d)||r(m)),device:!r(b)&&(r(c)||r(d)||r(h)||r(m))||r(/\bokhttp\b/i)},windows:{phone:r(b),tablet:r(n),device:r(b)||r(n)},other:{blackberry:r(p),blackberry10:r(q),opera:r(s),firefox:r(u),chrome:r(t),device:r(p)||r(q)||r(s)||r(u)||r(t)},any:!1,phone:!1,tablet:!1};return o.any=o.apple.device||o.android.device||o.windows.device||o.other.device,o.phone=o.apple.phone||o.android.phone||o.windows.phone,o.tablet=o.apple.tablet||o.android.tablet||o.windows.tablet,o}f=x();if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f}else if(typeof define==="function"&&define.amd){define(function(){return f})}else{this["isMobile"]=f}})();
     </script>
@@ -107,6 +121,7 @@
             <li data-id="24">In Flanders fields</li>
             <li data-id="25">John McCrae</li>
             <li data-id="26"></li>
+            <li data-id="27"></li>
         </ol>
       </nav>
     </div>
@@ -143,7 +158,12 @@
               </div>
               <div class="row">
                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 text">
-                  <p>A reading of the poem first published on December 8 1915 in the London magazine <a href="https://en.wikipedia.org/wiki/Punch_(magazine)" title="Punch (magazine)">Punch</a>.</p><p><br></p>
+                  <p style="background:rgba(0,0,0,0.8)">A reading of the poem first published on December 8 1915 in the London magazine <a href="https://en.wikipedia.org/wiki/Punch_(magazine)" title="Punch (magazine)">Punch</a>.</p><p><br></p><p><br></p><p style="background:rgba(0,0,0,0.8)">This piece is an exploration into providing timed visuals to a poem reading in a way alternative to video. As you scroll, a segment of the poem will be read.
+<br>
+Scroll to the next visual cue point indicated by the bold yellow line to hear the next part of the poem.
+<br>
+<span style="background:gold;width:100%;height:0.5rem;display:inline-block"></span>
+<br>As an alternative, use your left and right arrow keys to listen to each segment of the poem in turn.</p><p><br></p>
 <div style="font-size: 12px;"><span><span style="font-size: 12px;">Photo by </span><a href="https://unsplash.com/@metinozer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Metin Ozer</a><span style="font-size: 12px;"> on </span><a href="https://unsplash.com/s/photos/remembrance-day?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"><span style="font-size: 12px;">Unsplash</span></a></span></div>
                 </div>
               </div>
@@ -760,9 +780,34 @@
 
 
 
+
+
+
+
+
+          <section class="no-effects part text_align-center  reverse_colors "
+                   name="story27"
+>
+            <div class="content container-fluid">
+              <div class="row">
+                <div class="col-sm-12 header">
+                    <h2><p style="text-align: left">Credits</p></h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 text">
+                    <p><span style="font-size: 12px;">Poem content assembled and curated by Naomi Aro.</span></p><p><span style="font-size: 12px;">Read by: </span><a href="https://www.gutenberg.org/files/23900/mp3/23900-02.mp3" target="_blank"><span style="font-size: 12px;">Hugh McGuire</span></a><span style="font-size: 12px;"> </span></p><p><span style="font-size: 12px;">Recording taken from </span><a href="https://www.gutenberg.org/files/23900/23900-index.html" target="_blank"><span style="font-size: 12px;">https://www.gutenberg.org/files/23900/23900-index.html</span></a><br></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
     </article>
       <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> -->
       <script>Hls = {}; // remove me if you use the script above.</script>
-      <script type="text/javascript" src="app.e6553c14a4ba7a636b5e.js"></script>
+      <script type="text/javascript" src="app.dd4239520a2af346a0cf.js"></script>
   </body>
 </html>
