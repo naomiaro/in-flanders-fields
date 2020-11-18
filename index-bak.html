@@ -56,15 +56,6 @@
 
         <style>
         .part.imageaudio {position:relative;}
-.part.imageaudio.active.playing + .part.imageaudio::after {
- content: '';
- display: block;
- height: 0;
- border-top: 0.5rem dashed gold;
- position: absolute;
- top: 0;
- width: 100vw;
-}
 .part.imageaudio.active.heard + .part.imageaudio::after {
  background: gold;
  content: '';
@@ -80,6 +71,15 @@
     <script type="text/javascript">
       (function () {var f={};var g=/iPhone/i,i=/iPod/i,j=/iPad/i,k=/\biOS-universal(?:.+)Mac\b/i,h=/\bAndroid(?:.+)Mobile\b/i,m=/Android/i,c=/(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,d=/Silk/i,b=/Windows Phone/i,n=/\bWindows(?:.+)ARM\b/i,p=/BlackBerry/i,q=/BB10/i,s=/Opera Mini/i,t=/\b(CriOS|Chrome)(?:.+)Mobile/i,u=/Mobile(?:.+)Firefox\b/i,v=function(l){return void 0!==l&&"MacIntel"===l.platform&&"number"==typeof l.maxTouchPoints&&l.maxTouchPoints>1&&"undefined"==typeof MSStream};function w(l){return function($){return $.test(l)}}function x(l){var $={userAgent:"",platform:"",maxTouchPoints:0};l||"undefined"==typeof navigator?"string"==typeof l?$.userAgent=l:l&&l.userAgent&&($={userAgent:l.userAgent,platform:l.platform,maxTouchPoints:l.maxTouchPoints||0}):$={userAgent:navigator.userAgent,platform:navigator.platform,maxTouchPoints:navigator.maxTouchPoints||0};var a=$.userAgent,e=a.split("[FBAN");void 0!==e[1]&&(a=e[0]),void 0!==(e=a.split("Twitter"))[1]&&(a=e[0]);var r=w(a),o={apple:{phone:r(g)&&!r(b),ipod:r(i),tablet:!r(g)&&(r(j)||v($))&&!r(b),universal:r(k),device:(r(g)||r(i)||r(j)||r(k)||v($))&&!r(b)},amazon:{phone:r(c),tablet:!r(c)&&r(d),device:r(c)||r(d)},android:{phone:!r(b)&&r(c)||!r(b)&&r(h),tablet:!r(b)&&!r(c)&&!r(h)&&(r(d)||r(m)),device:!r(b)&&(r(c)||r(d)||r(h)||r(m))||r(/\bokhttp\b/i)},windows:{phone:r(b),tablet:r(n),device:r(b)||r(n)},other:{blackberry:r(p),blackberry10:r(q),opera:r(s),firefox:r(u),chrome:r(t),device:r(p)||r(q)||r(s)||r(u)||r(t)},any:!1,phone:!1,tablet:!1};return o.any=o.apple.device||o.android.device||o.windows.device||o.other.device,o.phone=o.apple.phone||o.android.phone||o.windows.phone,o.tablet=o.apple.tablet||o.android.tablet||o.windows.tablet,o}f=x();if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f}else if(typeof define==="function"&&define.amd){define(function(){return f})}else{this["isMobile"]=f}})();
     </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119779433-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119779433-1');
+      </script>
   </head>
 
   <body class="longform frozen" name="top">
@@ -88,50 +88,6 @@
 
       <h3 class="story-name" style="padding:2rem;line-height:1.5;display:flex;flex-direction:column;"><span style="font-size:3.5rem;">In Flanders Fields,</span><span>By John McCrae</span></h3>
       <div id="play_start" class="play-start" style="display: none;text-align:center;"><a  href="#" style="text-decoration: underline;font-size: 200%" tabindex="99">Read the poem</a><div style="max-width: 600px">This piece is an exploration into alternative methods of providing timed visuals to a reading of a poem</div></div>
-    </div>
-
-    <span class="mute">Mute</span>
-    <div class="menu_open">
-      <div class="sticks_wrapper">
-        <div class="stick -first" id="stick1"></div>
-        <div class="stick -second" id="stick2"></div>
-        <div class="stick -third" id="stick3"></div>
-      </div>
-    </div>
-
-    <div class="nav">
-      <nav>
-        <ol>
-            <li data-id="0"></li>
-            <li data-id="1">In Flanders Fields</li>
-            <li data-id="2">The poppies blow</li>
-            <li data-id="3">Between the crosses</li>
-            <li data-id="4">Row on row</li>
-            <li data-id="5">That mark our place</li>
-            <li data-id="6">and in the sky</li>
-            <li data-id="7">The larks</li>
-            <li data-id="8">still bravely singing</li>
-            <li data-id="9">fly</li>
-            <li data-id="10">Scarce heard</li>
-            <li data-id="11">amid the guns below</li>
-            <li data-id="12">We are the Dead</li>
-            <li data-id="13">Short days ago We lived</li>
-            <li data-id="14">felt dawn</li>
-            <li data-id="15">saw sunset glow</li>
-            <li data-id="16">Loved and were loved</li>
-            <li data-id="17">and now we lie, In Flanders fields</li>
-            <li data-id="18">Take up our quarrel with the foe</li>
-            <li data-id="19">To you from failing hands we throw The torch;</li>
-            <li data-id="20">be yours to hold it high</li>
-            <li data-id="21">If ye break faith with us who die</li>
-            <li data-id="22">We shall not sleep</li>
-            <li data-id="23">though poppies grow</li>
-            <li data-id="24">In Flanders fields</li>
-            <li data-id="25">John McCrae</li>
-            <li data-id="26"></li>
-            <li data-id="27"></li>
-        </ol>
-      </nav>
     </div>
 
     <article id="scrollytelling">
@@ -169,17 +125,13 @@
                   <p style="background:rgba(0,0,0,0.8)">A reading of the poem first published on December 8 1915 in the London magazine <a href="https://en.wikipedia.org/wiki/Punch_(magazine)" title="Punch (magazine)">Punch</a>.</p><p><br></p><p><br></p><p style="background:rgba(0,0,0,0.8)">This piece is an exploration into alternative methods of providing timed visuals to a reading of a poem. The following page has been broken up into segments which will trigger audio upon enter.
 <br>
 <br>
-The upcoming section will be shown by a dashed line. Scrolling past this point will interrupt the reader and move on to the next line of the poem.
-<br>
-<span style="border-top:0.5rem dashed gold;width:100%;height:0;display:inline-block"></span>
-<br>
-<br>
-A visual cue point will be indicated by a bold yellow line when the current section of the poem is finished. Scrolling past will trigger the next part of the poem.
+A visual cue point will be indicated by a bold yellow line, which when scrolling past will trigger the next part of the poem.
 <br>
 <span style="background:gold;width:100%;height:0.5rem;display:inline-block"></span>
 <br>
 <br>
-As an alternative, use your left (prev) and right (next) arrow keys to navigate and listen to each segment of the poem in turn.</p><p><br></p>
+As an alternative, use your left (prev) and right (next) arrow keys to navigate and listen to each segment of the poem in turn.
+</p><p><br></p>
 <div style="font-size: 12px;"><span><span style="font-size: 12px;">Photo by </span><a href="https://unsplash.com/@metinozer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Metin Ozer</a><span style="font-size: 12px;"> on </span><a href="https://unsplash.com/s/photos/remembrance-day?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"><span style="font-size: 12px;">Unsplash</span></a></span></div>
                 </div>
               </div>
@@ -845,10 +797,10 @@ As an alternative, use your left (prev) and right (next) arrow keys to navigate 
 
 
 
+      <div class="subtitles" style="display:none"></div>
     </article>
-    <div class="subtitles" style="display:none"></div>
       <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> -->
       <script>Hls = {}; // remove me if you use the script above.</script>
-      <script type="text/javascript" src="app.2e419e3c6bbceaf910ea.js"></script>
+      <script type="text/javascript" src="app-iphone.js"></script>
   </body>
 </html>
